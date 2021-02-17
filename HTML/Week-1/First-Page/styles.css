@@ -1,0 +1,132 @@
+body {
+    background-color: rgb(43, 39, 39);
+    background-image: url(./assets/legos.jpg);
+    background-repeat: no-repeat;
+    background-size: 700px;
+    background-position: top;
+}
+
+#title {
+    border-color: black;
+    border-width: 15px;
+    border-style: double;
+    background-color: darkgray;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-family: 'Muli';
+    font-size: 20px;
+}
+#creative {
+    margin-top:250px;
+    border-color: black;
+    border-width: 15px;
+    border-style: double;
+    background-color: darkgray;
+    text-align: center;
+    padding: 30px;
+    font-family: 'Muli';
+    font-size: 20px;
+}
+#creative-text {
+    padding:10px;
+    border-color: black;
+    border-width: 5px;
+    border-style: solid;
+    background-color: rgb(194, 178, 178);
+    text-align: center;
+    font-family: 'Muli';
+    font-size: 15px;
+}
+#facts {
+    margin-top: 100px;
+    border-color: black;
+    border-width: 15px;
+    border-style: double;
+    background-color: darkgray;
+    text-align: center;
+    padding: 30px;
+    font-family: 'Muli';
+    font-size: 20px;
+}
+#facts-text {
+    padding:10px;
+    border-color: black;
+    border-width: 5px;
+    border-style: solid;
+    background-color: rgb(194, 178, 178);
+    text-align: center;
+    font-family: 'Muli';
+    font-size: 18px;
+}
+#logo{
+    width: 70px;
+    height: 30px;
+}
+.reflection {
+    margin-top:100px;
+    border-color: black;
+    border-width: 15px;
+    border-style: double;
+    background-color: darkgray;
+    text-align: center;
+    padding: 30px;
+    font-family: 'Muli';
+    font-size: 20px;
+}
+.reflection-text{
+    padding:10px;
+    border-color: black;
+    border-width: 5px;
+    border-style: solid;
+    background-color: rgb(194, 178, 178);
+    text-align: center;
+    font-family: 'Muli';
+    font-size: 15px;
+}
+footer{
+    background-color: darkolivegreen;
+    text-align: center;
+    font-size: 15px;
+    height: 40px;
+    padding: 10px;
+}
+@media(max-width: 800px){
+    body {
+        background-size: 500px;
+
+    }
+    #title{
+        font-size: 15px;
+        color: darkred;
+    }
+    #creative {
+        font-size: 15px;
+        color: darkred;
+
+    }
+    #creative-text {
+        font-size: 10px;
+        color:darkred;
+    }
+    #facts {
+        font-size: 15px;
+        color: darkred;
+    }
+    #facts-text {
+        font-size: 10px;
+        color: darkred;
+    }
+    #logo{
+        width: 50px;
+        height: 20px;
+    }
+    .reflection {
+        font-size: 15px;
+        color: darkred;
+    }
+    .reflection-text{
+        font-size: 10px;
+        color: darkred;
+    }
+}
