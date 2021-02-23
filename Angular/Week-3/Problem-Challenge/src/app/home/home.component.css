@@ -1,0 +1,43 @@
+#grocery-bag {
+    width: 150px;
+    margin-bottom: 20px;
+}
+#dropIcon{
+    width: 20px;
+}
+h4{
+    margin-top: 20px;
+}
+#userAdress{
+    margin-bottom: 40px;
+}
+#submitOrder{
+    margin-bottom: 40px;
+}
+select{
+    width:200px;
+
+}
+.dark-modal .modal-content {
+    background-color: #292b2c;
+    color: white;
+  }
+  .dark-modal .close {
+    color: white;
+  }
+  .light-blue-backdrop {
+    background-color: #5cb3fd;
+  }
+.produce-icon{
+    width: 25px;
+}
+#carrot-icon{
+    margin-left: 15px;
+    height: 25px;
+    width: 10px;
+}
+.counter{
+    width: 30px;
+    margin-left: 20px;
+
+}

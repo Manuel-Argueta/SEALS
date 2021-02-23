@@ -1,0 +1,38 @@
+body{
+  background-color: rgb(160, 183, 224);
+
+}
+#addNew {
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+}
+ul {
+  list-style: none
+}
+li::before {
+  content: "-"; 
+  color: white;
+  display: inline-block; 
+  width: 1em;
+  margin-left: -1em}
+#taskList{
+  background-color: rgb(52, 62, 105);
+  border-radius:10px;
+  color: white;
+  font-weight: 500;
+  padding-top:20px;
+  padding-bottom: 10px;
+
+}
+#lost-kid{
+  width:100px;
+  border: black 5px solid;
+  border-radius: 30px;
+  margin-bottom: 10px;
+
+}
+.jumbotron{
+  background-color: rgb(52, 62, 105);
+  color: white;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <div class="container text-center">
+      <div class="jumbotron">
+        <h1>Tired Of Forgetting Things?</h1>
+        <img id = "lost-kid" src = "../assets/lost-kid.png">
+        <p><b>Use the To-Do List Maker and Organize Yourself Today!</b></p>
+      </div>
+    </div>
+    <form>
+      <div class="form-row justify-content-center">
+        <div class="form-group col-md-5">
+          <label for = "taskTitle">Task Title</label>
+          <input type="text" class="form-control" name = "title" [(ngModel)]="taskTitle" placeholder="Ex. Code API" onclick = "this.value=''">
+        </div>
+        <div class="form-group col-md-5">
+          <label for="taskDate">Task Due Date</label>
+          <input type="text" class="form-control" id="taskDate" name = "date" [(ngModel)]="taskDate" placeholder="Ex. 02/28/2021 5:30 PM" onclick = "this.value=''">
+        </div>
+      </div>
+
+      <div class="form-row justify-content-center">
+      <div class="form-group col-md-5">
+        <label for="taskDescription">Task Description</label>
+        <input type="text" class="form-control" id="taskDescription" name = 'desc' [(ngModel)]="taskDescription" placeholder="Ex. I have to code the following API for ..." onclick = "this.value=''">
+      </div>
+    </div>
+    </form>
+
+    <div class = "text-center">
+      <button id  = "addNew" (click) = "addTask()"class = "btn btn-dark">Add New Task</button>
+    </div>
+
+    <div id = "taskList" *ngIf = "taskInputed">
+    <ul *ngFor ="let item of taskInfo">
+          <li>{{item}}</li>
+    </ul>
+  </div>
+  </body>
+</html>
+

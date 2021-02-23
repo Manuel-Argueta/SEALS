@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+    crossorigin="anonymous">
+</head>
+ 
+<body>
+    <div class="jumbotron">
+        <div class="container text-center">
+            <h5 class='display-5'>Here at South Central grocery Shopping we aim to both provide
+                    community involvement and community support. We believe that involving our community
+                    is the best way to support it. <b>We deliver groceries to all people in South Central!</b></h5>
+            <img id='grocery-bag' src='../assets/grocery-bag.png'>
+            <h6>Follow the instructions below to make you first order!</h6>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="col-md-12">
+                
+                    <h4>Step 1: Store Location</h4>
+                        <select class="form-select" [(ngModel)] = "selectedStore">
+                            <option selected>Select the Supermarket</option>
+                            <option *ngFor = "let s of storeLocations">
+                                {{s.location}}
+                            </option>
+                        </select>
+                    <h4>Step 2: Select Delivery Date</h4>
+                            <select class="form-select" [(ngModel)] = "selectedDate">
+                                <option selected>Select Your Order's Delivery Date</option>
+                                <option *ngFor = "let d of deliveryDates">
+                                    {{d.date}}
+                                </option>
+                            </select>
+                    <h4>Step 3: Enter Your Delivery Address</h4>
+                    <div class="input-group flex-nowrap">
+                        <input type="text" [(ngModel)] = "userDeliveryAdress" class="form-control" placeholder="Enter Your Address" onclick = "this.value = ''">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="col-md-12 ">
+                    <h4>Step 4: Select Your Items</h4>
+                        <div class="btn-group mr-3">
+                            <button type="button" class="btn btn-dark">Select Your Products</button>
+                            <div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
+                              <button class="btn btn-dark" ngbDropdownToggle><img id = 'dropIcon'src = '../assets/grocery-bag.png'></button>
+                              <div class="dropdown-menu" ngbDropdownMenu>
+                                <button class="btn btn-dark" id ='selection1' ngbDropdownItem (click)="openWindowCustomClass(content)">Fresh Produce</button>
+                                <button class="btn btn-dark" id = 'selection2' ngbDropdownItem>Canned Goods</button>
+                                <button class="btn btn-dark" id = 'selection3' ngbDropdownItem>Perishables</button>
+                                <button class="btn btn-dark" id = 'selection3' ngbDropdownItem>Miscellaneous Items</button>
+                              </div>
+                            </div>
+                          </div>
+                          <ng-template #content let-modal>
+                            <div class="modal-header">
+                              <h4 class="modal-title">Fresh Produce</h4>
+                            </div>
+                            <div class="modal-body">
+                                <button class = "btn btn-dark btn-s" (click) = "increaseLettuceCount()">Lettuce <img class = "produce-icon" src = '../assets/lettuce-icon.png'></button>
+                                <input class = "counter" placeholder="{{lettuceCount}}"><br>
+                                <button class = "btn btn-dark btn-s" (click) = "increaseTomatoCount()">Tomato <img class = "produce-icon" src = '../assets/tomato-icon.png'></button>
+                                <input class = "counter" placeholder="{{tomatoCount}}"><br>
+                                <button class = "btn btn-dark btn-s" (click) = "increaseOnionCount()">Onions <img class = "produce-icon" src = '../assets/onion-icon.png'></button>
+                                <input class = "counter" placeholder="{{onionCount}}"><br>
+                                <button class = "btn btn-dark btn-s" (click) = "increaseCarrotCount()">Carrots <img id = "carrot-icon" src = '../assets/carrot-icon.png'></button>
+                                <input class = "counter" placeholder="{{carrotCount}}"><br>
+                                <button class = "btn btn-dark btn-s" (click) = "increaseCeleryCount()">Celery <img class = "produce-icon" src = '../assets/celery-icon.png'></button>
+                                <input class = "counter" placeholder="{{celeryCount}}"><br>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-dark" (click)="modal.close('Close click')">Close</button>
+                            </div>
+                          </ng-template>
+                        <h4>Step 5: Order </h4>
+                        <button id = 'submitOrder'type="button" class="btn btn-dark btn-m" (click) = 'confirm()'>Complete Order</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" 
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" 
+    crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" 
+    crossorigin="anonymous"></script>
+</body>
+</html>

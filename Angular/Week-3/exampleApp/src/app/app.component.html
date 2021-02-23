@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <p>Hello {{fName}}.</p>
+
+    <input [(ngModel)] = 'age'>
+
+    <p>I am {{age}} years old.</p>
+
+    <ul *ngFor ="let item of toDos">
+      <li>{{item}}</li>
+    </ul>
+    <!-- Hides an image using *ngIf directive -->
+    <div *ngIf = "imageShow">
+    <img src = '../assets/calculator-icon.png' width = '100px'>
+    </div>
+    <button (click) = "displayImage()">Show Image</button>
+    <button (click) = "login()">Log In</button>
+
+    <router-outlet></router-outlet>
+
+  </body>
+</html>
