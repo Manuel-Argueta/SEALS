@@ -7,7 +7,7 @@ import {JournalApiService} from '../../Shared/Services/journal-api.service';
 })
 export class AllJournalsComponent implements OnInit {
 
-  public journals:any = [];
+  journals:any = [];
 
   constructor(public _apiService: JournalApiService){
 
@@ -22,7 +22,8 @@ export class AllJournalsComponent implements OnInit {
     this._apiService.listOfJournalsObs
     .subscribe(data => {
       this.journals = data;
-      console.log(data);
+      console.log(this.journals);
     });
   }
+  
 }

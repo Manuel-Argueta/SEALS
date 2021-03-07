@@ -76,9 +76,7 @@ server.get('/get-all-journals', (req,res) => {
                 message: "No Journals Found"
             });
         }
-        res.status(200).send({
-            document: doc
-        });
+        res.status(200).send(doc);
     });
 });
 
