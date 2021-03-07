@@ -7,12 +7,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
+    <h1>Studio Ghilbi Films</h1>
+    <div>
+      <ul *ngFor = "let m of movies">
+        <div class = "movie">
+        <p><b>Movie Title: </b>{{m.title}}</p>
+        <p><b>Description: </b>{{m.description}}</p>
+        <p><b>Director: </b>{{m.director}}</p>
+        <p><b>Producer: </b>{{m.producer}}</p>
+        <p><b>Release Date: </b>{{m.release_date}}</p>
+        <p><b>Rotten Tomatoes Score: </b>{{m.rt_score}}</p>
+        <p><b>Movie ID: </b>{{m.id}}</p>
+      </div>
+      </ul>
+    </div>
+  <!-- Post request --->
+    <form [formGroup] = "inputGroup" (ngSubmit)="onFormSubmit()">
+      <label for = "input">Movie Title</label> <br>
+      <br>
+      <input type = "text" placeholder = "Movie Title" formControlName = "title">
+      <button type="submit" >Post</button>
+    </form>
+    <div>
+      <ul>
+        <div class = "movie">
+        <p><b>Title: </b>{{selectedMovie.title}}</p>
+        <p><b>Description: </b>{{selectedMovie.description}}</p>
+        <p><b>Director: </b>{{selectedMovie.director}}</p>
+        <p><b>Producer: </b>{{selectedMovie.producer}}</p>
+        <p><b>Release Date: </b>{{selectedMovie.release_date}}</p>
+        <p><b>Rotten Tomatoes Score: </b>{{selectedMovie.rt_score}}</p>
+        <p><b>ID: </b>{{selectedMovie.id}}</p>
+      </div>
+      </ul>
+    </div>
+
+    
     <p>Hello {{fName}}.</p>
-
     <input [(ngModel)] = 'age'>
-
     <p>I am {{age}} years old.</p>
-
     <ul *ngFor ="let item of toDos">
       <li>{{item}}</li>
     </ul>
@@ -22,8 +55,5 @@
     </div>
     <button (click) = "displayImage()">Show Image</button>
     <button (click) = "login()">Log In</button>
-
-    <router-outlet></router-outlet>
-
   </body>
 </html>

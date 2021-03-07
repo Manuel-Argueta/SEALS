@@ -1,0 +1,16 @@
+<div class = "container">
+    <div class = "row">
+      <div class = "col-md-10">
+        <h1 class = "page-title mt-5">Delete A Journal</h1>
+      <form [formGroup] = "deleteForm" (ngSubmit)="removeSpecifiedJournal()">
+        <div class = "form-group">
+        <input type = "text" 
+         class = "form-control"
+         placeholder = "Journal Title" 
+         formControlName = "title">
+        </div>
+        <button type="submit" class="btn btn-danger">Remove</button>
+      </form>
+    </div>
+    </div>
+  </div>
