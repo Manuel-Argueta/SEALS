@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
-        <ul *ngFor = "let j of journals">
+        <ul *ngFor = "let j of journals.slice().reverse()">
         <div class="card mr-5 mt-2">
             <h3 class="card-header">{{j.title}}</h3>
             <div class="card-body">
