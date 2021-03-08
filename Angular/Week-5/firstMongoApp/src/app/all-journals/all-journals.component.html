@@ -7,8 +7,8 @@
     </head>
     <body>
         <ul *ngFor = "let j of journals.slice().reverse()">
-        <div class="card mr-5 mt-2">
-            <h3 class="card-header">{{j.title}}</h3>
+        <div class="card mr-5 mt-4 mb-4">
+            <h3 class="card-header">{{j.title}} <img id = "journal-icon" src = "../../favicon.ico"></h3>
             <div class="card-body">
               <p class="card-text">{{j.content}}</p>
               <h5>Author: {{j.author}}</h5>
